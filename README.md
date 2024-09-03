@@ -1,4 +1,4 @@
-# Mochileiros
+# Ver mais
 
 **Número da Lista**: 10<br>
 **Conteúdo da Disciplina**: Progamação Dinâmica<br>
@@ -10,6 +10,9 @@
 | 21/1031468 | Pedro Victor Salerno Martins    |
 
 ## Sobre 
+Esse projeto visa criar uma ferramenta web para solucionar o a seguinte situação problema:
+
+Você tem uma quantidade limitada de horas disponíveis para assistir séries durante uma semana. Cada série tem uma quantidade de horas para ser assistida e uma nota que reflete o quanto ela é bem avaliada ou o quanto você quer assisti-la. O objetivo é maximizar a qualidade total das séries assistidas sem ultrapassar o tempo disponível. Para solucionar este problema será utilizado o algoritmo da mochila.
 
 
 ## Video de apresentação
