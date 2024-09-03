@@ -58,6 +58,7 @@ $ . .venv/bin/activate
 ~~~
 ### Para executar em qualquer sistema 
 ~~~
+pip install flask
 python app.py
 ~~~
 
