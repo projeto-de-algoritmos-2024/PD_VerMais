@@ -7,14 +7,14 @@
 </head>
 <body>
     <h1>Ver mais</h1>
-    <form action="{{url_for('index')}}" method="post">
+    <form action="{{ url_for('index') }}" method="post">
         <table>
             <tr>
                 <th>Nome</th>
                 <th>Tempo</th>
                 <th>Nota</th>
             </tr>
-            <!-- Itera sobre os valores de inputs para manter os campos preenchidos -->
+            
             {% for name, time, rate in inputs %}
             <tr>
                 <td><input type="text" name="name[]" value="{{ name }}"></td>
@@ -22,15 +22,36 @@
                 <td><input type="text" name="rate[]" value="{{ rate }}"></td>
             </tr>
             {% endfor %}
-            <!-- Linha extra para novos campos -->
+            
             <tr>
                 <td><input type="text" name="name[]"></td>
                 <td><input type="text" name="time[]"></td>
                 <td><input type="text" name="rate[]"></td>
             </tr>
         </table>
-        <button>Enviar</button>
+        <label for="capacity">Capacidade:</label>
+        <input type="number" id="capacity" name="capacity" value="{{ capacity }}">
+        <button type="submit">Enviar</button>
     </form>
-    <p>{{ result }}</p>
+
+    {% if result %}
+    <h2>Itens Selecionados:</h2>
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>Peso</th>
+            <th>Valor</th>
+        </tr>
+        {% for item in result %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.weight }}</td>
+            <td>{{ item.value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>Nenhum item selecionado.</p>
+    {% endif %}
 </body>
 </html>
