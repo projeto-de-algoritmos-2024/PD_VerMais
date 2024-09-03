@@ -33,7 +33,35 @@ O video de apresentação pode ser encontrado em [link]()
 
 
 ## Uso 
-<!-- Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.  -->
+### Para windows:
+Execute os seguintes comandos em seu terminal para a instalação do framework flask
+
+~~~
+> cd PD_VerMais
+> python -m venv .venv
+~~~
+Para ativação
+~~~
+> .venv\Scripts\activate
+~~~
+
+### Para macOS e Linux
+Execute os seguintes comandos em seu terminal para a instalação do framework flask
+
+~~~
+$ cd PD_VerMais
+$ python3 -m venv .venv
+~~~
+Para ativação
+~~~
+$ . .venv/bin/activate
+~~~
+### Para executar em qualquer sistema 
+~~~
+python app.py
+~~~
+
+
 
 ## Outros 
 <!-- Quaisquer outras informações sobre seu projeto podem ser descritas abaixo. -->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ver mais</h1>
+    <form action="{{url_for('index')}}" method="post">
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Tempo</th>
+                <th>Nota</th>
+            </tr>
+            <!-- Itera sobre os valores de inputs para manter os campos preenchidos -->
+            {% for name, time, rate in inputs %}
+            <tr>
+                <td><input type="text" name="name[]" value="{{ name }}"></td>
+                <td><input type="text" name="time[]" value="{{ time }}"></td>
+                <td><input type="text" name="rate[]" value="{{ rate }}"></td>
+            </tr>
+            {% endfor %}
+            <!-- Linha extra para novos campos -->
+            <tr>
+                <td><input type="text" name="name[]"></td>
+                <td><input type="text" name="time[]"></td>
+                <td><input type="text" name="rate[]"></td>
+            </tr>
+        </table>
+        <button>Enviar</button>
+    </form>
+    <p>{{ result }}</p>
+</body>
+</html>
