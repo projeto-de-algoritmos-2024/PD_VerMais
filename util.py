@@ -1,8 +1,8 @@
 class Item:
     def __init__(self, name, weight, value):
-        self.name = name
-        self.weight = weight
-        self.value = value
+        self.name = name     # name
+        self.weight = weight # time
+        self.value = value   # rate
 
 class Knapsack:
     def __init__(self, capacity):
@@ -40,10 +40,10 @@ class Knapsack:
         for i in range(n, 0, -1):
             # Encheu a mochila
             if w <= 0:
-                break  
+                break
 
-            if self.memorization[i][w] != self.memorization[i-1][w]:  
+            if self.memorization[i][w] != self.memorization[i-1][w]:
                 solution.append(self.items[i-1]) # Adiciona na solucao o item levado
-                w -= self.items[i-1].weight 
+                w -= self.items[i-1].weight
 
         return solution
