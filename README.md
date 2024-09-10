@@ -18,7 +18,7 @@ Você tem uma quantidade limitada de horas disponíveis para assistir séries du
 
 
 ## Video de apresentação
-O video de apresentação pode ser encontrado em [link]()
+O video de apresentação pode ser encontrado em [link](https://youtu.be/oZHCMboFz0w)
 
 ## Screenshots
 
